@@ -1,0 +1,225 @@
+/* Container for the entire product display */
+.productdisplay {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+    gap: 20px;
+    background-color: #fff;
+    border: 1px solid #eee;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    max-width: 1200px;
+    margin: 20px auto;
+  }
+  
+  /* Left side (image section) */
+  .productdisplay-left {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    flex: 1;
+  }
+  
+  /* List of smaller images */
+  .productdisplay-img-list {
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+  }
+  
+  .productdisplay-img-list img {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+  }
+  
+  .productdisplay-img-list img:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Main product image */
+  .productdisplay-main-img {
+    width: 100%;
+    max-width: 700px;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+  }
+  
+  /* Right side (details section) */
+  .productdisplay-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .productdisplay-right h1 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .productdisplay-right-star {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  .productdisplay-right-star img {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .productdisplay-right-star p {
+    font-size: 14px;
+    color: #777;
+  }
+  
+  /* Old price */
+  .productdisplay-right-prices {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .productdisplay-right-price-old {
+    text-decoration: line-through; /* Keep the line only on the old price */
+    font-size: 18px;
+    color: #999;
+  }
+  
+  .productdisplay-right-price-new {
+    font-size: 22px;
+    font-weight: bold;
+    color: #ff5733; /* Highlighted price color */
+    text-decoration: none; /* Keep the line only on the old price */
+
+  }
+  
+  /* Description */
+  .productdisplay-right-description {
+    margin: 15px 0;
+    font-size: 18px;
+    line-height: 1.5;
+    color: #555;
+  }
+  
+  /* Size selection */
+  .productdisplay-right-size h1 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .productdisplay-right-size {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .productdisplay-right-size div {
+    border: 1px solid #ddd;
+    padding: 8px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  .productdisplay-right-size div:hover {
+    background-color: #ff5733;
+    color: #fff;
+  }
+  
+  /* Add to Cart button */
+  button {
+    background-color: #ff5733;
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 150px;
+  }
+  
+  button:hover {
+    background-color: #e74c3c;
+  }
+  
+  /* Category and Tags */
+  .productdisplay-right-category {
+  
+    margin: 5px 0; /* Adjusted margin for spacing */
+
+    font-size: 20px;
+    color: #666;
+  }
+  
+  .productdisplay-right-category span {
+    font-weight: bold;
+    color: #333;
+  }
+  
+  /* Media Queries for responsiveness */
+  
+  /* Tablets */
+  @media (max-width: 768px) {
+    .productdisplay {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .productdisplay-left {
+      width: 100%;
+    }
+  
+    .productdisplay-right {
+      width: 100%;
+    }
+  
+    .productdisplay-main-img {
+      max-width: 100%;
+    }
+  }
+  
+  /* Mobile */
+  @media (max-width: 480px) {
+    .productdisplay {
+      padding: 10px;
+    }
+  
+    .productdisplay-right h1 {
+      font-size: 22px;
+    }
+  
+    .productdisplay-right-star img {
+      width: 16px;
+      height: 16px;
+    }
+  
+    .productdisplay-right-price-new {
+      font-size: 20px;
+    }
+  
+    button {
+      width: 100%;
+    }
+  
+    .productdisplay-right-size {
+      gap: 10px;
+    }
+  
+    .productdisplay-right-size div {
+      padding: 6px 10px;
+    }
+  
+    .productdisplay-right-category {
+      font-size: 12px;
+    }
+  }
+  

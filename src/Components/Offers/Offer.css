@@ -1,0 +1,129 @@
+.offers {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(to bottom, #ff9c6a, #ffffff); /* Lighter orange to white */
+  padding: 50px;
+  border-radius: 15px;
+  margin: 20px auto; /* Centered with auto margins */
+  max-width: 1200px;
+  width: 100%; /* Ensure it takes full width */
+  box-sizing: border-box; /* Include padding in width calculations */
+}
+
+.offer-left {
+  flex: 1;
+  padding: 20px;
+}
+
+.offer-left h1 {
+  font-size: 3vw;
+  font-weight: bold;
+  margin: 10px 0;
+  color: #333;
+}
+
+.offer-left p {
+  font-size: 1.5vw;
+  margin: 20px 0;
+  color: #555;
+}
+
+.offer-left button {
+  padding: 15px 30px;
+  font-size: 1.2vw;
+  color: #fff;
+  background-color: #ff4b2b;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.offer-left button:hover {
+  background-color: #ff6f61;
+}
+
+.offer-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.offer-right img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .offers {
+    flex-direction: column;
+    text-align: center;
+    padding: 30px;
+    width: 100%; /* Ensure full width */
+  }
+
+  .offer-left h1 {
+    font-size: 8vw;
+  }
+
+  .offer-left p {
+    font-size: 4vw;
+  }
+
+  .offer-left button {
+    font-size: 4vw;
+    padding: 12px 20px;
+  }
+
+  .offer-right img {
+    max-width: 100%;
+    margin-top: 20px;
+  }
+}
+
+/* Tablet responsiveness */
+@media (max-width: 1024px) {
+  .offers {
+    padding: 40px;
+  }
+
+  .offer-left h1 {
+    font-size: 5vw;
+  }
+
+  .offer-left p {
+    font-size: 2vw;
+  }
+
+  .offer-left button {
+    font-size: 2vw;
+  }
+
+  .offer-right img {
+    max-width: 350px;
+  }
+}
+
+/* Desktop responsiveness */
+@media (min-width: 1200px) {
+  .offers {
+    padding: 60px;
+  }
+
+  .offer-left h1 {
+    font-size: 3.5vw;
+  }
+
+  .offer-left p {
+    font-size: 1.3vw;
+  }
+
+  .offer-left button {
+    font-size: 1.1vw;
+  }
+}

@@ -1,0 +1,182 @@
+/* General Navbar Styles */
+.navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: #f7f3e9;  /* Consistent white background */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  position: relative;
+  z-index: 10;
+}
+
+/* Logo and Shop Name */
+.logo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo {
+  height: 45px;  /* Adjusted size */
+}
+
+.shop-name {
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: 5px;
+  color: #333; /* Consistent dark text color */
+  text-align: center;
+}
+
+/* Menu Icon (Hamburger and Close Icon) */
+.navbar-toggler {
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  left: 10px;
+  font-size: 30px;
+  z-index: 11;  /* Ensure it remains above other elements but below cart */
+}
+
+.menu-icon {
+  color: #333; /* Ensure consistent color */
+  font-size: 30px;
+  margin-right: 900px;
+}
+
+/* Center the links on desktop */
+.links-wrapper {
+  flex-grow: 1; /* Allow it to take available space */
+  display: flex;
+  justify-content: center; /* Center the links */
+}
+
+/* Navbar links */
+.navbar-links {
+  display: flex;
+  list-style: none;
+  gap: 20px;  /* Add space between links */
+  padding: 0; /* Reset padding */
+}
+
+.navbar-links li {
+  position: relative;
+  padding: 5px;
+}
+
+.navbar-links li.active .nav-link {
+  font-weight: bold;
+  color: #ff6b6b; /* Highlight active menu item */
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #333;
+  transition: color 0.3s;
+  font-size: 15px;
+}
+
+.nav-link:hover {
+  color: #ff6b6b; /* Hover color */
+}
+
+/* Cart Icon Styles */
+.cart-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  position: absolute;
+  top: 20px;
+  right: 10px;
+  z-index: 12; /* Higher than the menu toggle */
+}
+
+.cart-icon {
+  height: 30px;
+}
+
+.nav-cart-count {
+  background-color: #ff6b6b; /* Consistent with brand color */
+  color: white;
+  border-radius: 50%;
+  padding: 4px 8px;
+  font-size: 12px;
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  line-height: 1;
+}
+
+/* Responsive Styles for Mobile */
+@media (max-width: 768px) {
+  .navbar-container {
+    height: 85px;  /* Increased height for mobile */
+    padding: 15px 20px;
+  }
+
+  .logo-container {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  /* Hide the navbar links initially for mobile view */
+  .navbar-links {
+    position: absolute;
+    top: 85px;
+    right: 0;
+    background-color: #f0ebe1;
+    flex-direction: column;
+    width: 200px;
+    height: 100vh;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+    padding-top: 30px;
+    box-shadow: -4px 0px 10px rgba(0, 0, 0, 0.1);
+    z-index: 10; /* Should be under cart container */
+    text-decoration: underline;
+  }
+
+  /* Active state when the menu is opened */
+  .navbar-links.active {
+    transform: translateX(0);
+    
+  }
+
+  .navbar-links li {
+    padding: 15px 20px;
+    width: 100%;
+    text-align: left;
+    text-decoration: underline;
+  }
+
+  .cart-container {
+    position: absolute;
+    top: 20px;
+    right: 10px;
+  }
+}
+
+@media (min-width: 769px) {
+  .navbar-toggler {
+    display: none;
+  }
+
+  .logo-container {
+    position: static;
+    transform: none;
+  }
+
+  .navbar-links {
+    position: static;
+    flex-direction: row;
+    text-decoration: underline;
+    height: auto;
+    transform: none;
+    box-shadow: none;
+  }
+}
