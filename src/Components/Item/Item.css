@@ -1,0 +1,52 @@
+.item {
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    text-align: left;
+    padding: 10px;
+    position: relative;
+}
+
+/* Hover effect for items */
+.item:hover {
+    transform: scale(1.05);
+}
+
+/* Image styling */
+.item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Product name styling */
+.item p {
+    font-size: 1rem;
+    font-weight: 500;
+    margin: 8px 0;
+    color: #333;
+}
+
+/* Price section for new and old prices */
+.item-prices {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+/* New price styling */
+.item-price-new {
+    color: #e60023;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* Old price styling */
+.item-price-old {
+    color: #999;
+    font-size: 1rem;
+    text-decoration: line-through;
+    font-weight: normal;
+}

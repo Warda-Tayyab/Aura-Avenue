@@ -1,0 +1,123 @@
+/* General Reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', Arial, sans-serif; /* Use a web-safe fallback */
+  }
+  
+  /* Body Text */
+  
+  body {
+    font-size: 16px; /* Base font size */
+    line-height: 1.6;
+    font-family: 'Open Sans', Arial, sans-serif;
+    color: #333; /* Dark gray for readability */
+  }
+  
+  /* Headings */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Roboto', sans-serif;
+    color: #222; /* Slightly darker */
+    margin-bottom: 1rem; /* Adds spacing */
+  }
+  
+  h1 {
+    font-size: 36px;
+    font-weight: 700;
+  }
+  
+  h2 {
+    font-size: 28px;
+    font-weight: 600;
+  }
+  
+  h3 {
+    font-size: 24px;
+    font-weight: 600;
+  }
+  
+  h4 {
+    font-size: 20px;
+    font-weight: 500;
+  }
+  
+  h5 {
+    font-size: 18px;
+    font-weight: 500;
+  }
+  
+  h6 {
+    font-size: 16px;
+    font-weight: 500;
+  }
+  
+  /* Links */
+  a {
+    color: #e68a00; /* Blue for links */
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Buttons */
+  button, .btn {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    background-color: #ff9900;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover, .btn:hover {
+    background-color: #e68a00;
+  }
+  
+  /* Product Titles */
+  .product-title {
+    font-size: 18px;
+    font-weight: 500;
+    color: #333;
+  }
+  
+  .product-price {
+    font-size: 20px;
+    font-weight: 600;
+    color: #b12704; /* Amazon-like red for price */
+  }
+  
+  /* Navigation Menu */
+  .navbar {
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+  }
+  
+  .navbar a {
+    color: #333;
+    padding: 10px;
+  }
+  
+  
+  
+  /* Captions and Labels */
+  .caption {
+    font-size: 14px;
+    color: #777;
+  }
+  
+  /* Footer */
+  footer {
+    font-size: 14px;
+    font-family: 'Open Sans', sans-serif;
+    color: #555;
+  }
+  
+  

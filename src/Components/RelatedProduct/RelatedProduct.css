@@ -1,0 +1,58 @@
+/* Main container for related products */
+.relatedproducts {
+    padding: 20px;
+    background-color: #f9f9f9;
+    max-width: 1200px;
+    margin: 20px auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Heading for related products */
+  .relatedproducts h1 {
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  /* Horizontal rule under the heading */
+  .relatedproducts hr {
+    border: 0;
+    height: 1px;
+    background: #ddd;
+    margin: 10px 0;
+  }
+  
+  /* Product items grid */
+  .relatedproducts-item {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+  
+  /* Media Queries for responsiveness */
+  
+  /* Tablets */
+  @media (max-width: 768px) {
+    .relatedproducts-item {
+      grid-template-columns: repeat(2, 1fr); /* 2 items per row on tablets */
+    }
+  
+    .relatedproducts h1 {
+      font-size: 24px;
+    }
+  }
+  
+  /* Mobile Devices */
+  @media (max-width: 480px) {
+    .relatedproducts-item {
+      grid-template-columns: 1fr; /* 1 item per row on mobile */
+    }
+  
+    .relatedproducts h1 {
+      font-size: 20px;
+    }
+  }
+  
